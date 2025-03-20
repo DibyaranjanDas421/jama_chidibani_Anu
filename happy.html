@@ -1,0 +1,233 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Photo Gallery with Music</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            margin: 0;
+            padding: 20px;
+            overflow: hidden;
+        }
+        .gallery-container {
+            perspective: 1000px;
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            margin-top: 100px;
+        }
+        .carousel {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            animation: rotate 20s infinite linear;
+        }
+        .carousel div {
+            position: absolute;
+            width: 250px;
+            height: 150px;
+            left: 25px;
+            top: 25px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.5s ease-in-out;
+        }
+        @keyframes rotate {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(360deg); }
+        }
+        .controls {
+            margin-top: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #d43f8d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .music-player {
+            margin-top: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>3D Rotating Photo Gallery with Music</h1>
+    <div class="gallery-container">
+        <div class="carousel" id="carousel">
+            <div style="background-image: url('./assets/0383fb71-d6ca-418c-8b32-a5793c40fbbc.jpg'); transform: rotateY(0deg) translateZ(500px);"></div>
+            <div style="background-image: url('./assets/04c1d2b3-3f8a-4b37-8085-a724c51b5c5b.jpg'); transform: rotateY(40deg) translateZ(500px);"></div>
+            <div style="background-image: url('./assets/187336e5-4c87-454d-9cb2-82e50764ca1e.jpg'); transform: rotateY(80deg) translateZ(500px);"></div>
+            <div style="background-image: url('./assets/248c2762-5764-4cf2-8343-0be79045773a.jpg'); transform: rotateY(120deg) translateZ(500px);"></div>
+            <div style="background-image: url('./assets/3632b3fd-a0c5-48b4-ac65-d8209bfb10e4.jpg'); transform: rotateY(160deg) translateZ(500px);"></div>
+            <div style="background-image: url('./assets/701b98bd-f6ad-46f5-b521-80dc982d55c6.jpg'); transform: rotateY(200deg) translateZ(500px);"></div>
+            <div style="background-image: url('./assets/a41e9516-3576-448f-9172-24d76d8704ff.jpg'); transform: rotateY(240deg) translateZ(500px);"></div>
+            <div style="background-image: url('./assets/c1f8fa90-1075-48a0-b3a3-595cc4cc4889.jpg'); transform: rotateY(280deg) translateZ(500px);"></div>
+            <div style="background-image: url('./assets/d6664ecd-ab55-4e5e-a3fc-3dd3af564d98.jpg'); transform: rotateY(320deg) translateZ(500px);"></div>
+        </div>
+    </div>
+    <div class="controls">
+        <button class="button" onclick="rotateLeft()">&#x25C0; Previous</button>
+        <button class="button" onclick="rotateRight()">Next &#x25B6;</button>
+    </div>
+    
+    <div class="music-player">
+        <h2>Background Music</h2>
+        <audio controls loop>
+            <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    
+    <script>
+        let angle = 0;
+        function rotateLeft() {
+            angle -= 40;
+            document.getElementById('carousel').style.transform = `rotateY(${angle}deg)`;
+        }
+        function rotateRight() {
+            angle += 40;
+            document.getElementById('carousel').style.transform = `rotateY(${angle}deg)`;
+        }
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Photo Gallery with Music</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            margin: 0;
+            padding: 20px;
+            overflow: hidden;
+        }
+        .gallery-container {
+            perspective: 1200px;
+            position: relative;
+            width: 400px;
+            height: 400px; /* Increased height */
+            margin: auto;
+            margin-top: 80px;
+        }
+        .carousel {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            transition: transform 1s ease-in-out;
+        }
+        .carousel div {
+            position: absolute;
+            width: 200px; /* Increased width */
+            height: 280px; /* Increased height */
+            left: 75px; /* Centering */
+            top: 100px; /* Move images down */
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        }
+        .controls {
+            margin-top: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #d43f8d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+           
+        
+        }
+      
+        .gallery-container {
+    perspective: 1200px;
+    position: relative;
+    width: 400px;
+    height: 450px; /* Increased height to fit images */
+    margin: auto;
+    margin-top: 120px; /* Increased to move gallery down */
+}
+
+.carousel div {
+    position: absolute;
+    width: 200px; /* Increased width */
+    height: 280px; /* Increased height */
+    left: 100px; /* Centering */
+    top: 50px; /* Adjusted to prevent text overlap */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    margin-top: 55px;
+}
+
+.music-player {
+    margin-top: -200px; /* Reduced margin to bring it closer */
+}
+
+    </style>
+</head>
+<body>
+    <h1>JAMA CHIDIBANI DR.ANU</h1>
+    
+    <div class="gallery-container">
+        <div class="carousel" id="carousel">
+            <div style="background-image: url('./assets/0383fb71-d6ca-418c-8b32-a5793c40fbbc.jpg'); transform: rotateY(0deg) translateZ(600px) translateY(-50px);"></div>
+            <div style="background-image: url('./assets/04c1d2b3-3f8a-4b37-8085-a724c51b5c5b.jpg'); transform: rotateY(40deg) translateZ(600px) translateY(-50px);"></div>
+            <div style="background-image: url('./assets/187336e5-4c87-454d-9cb2-82e50764ca1e.jpg'); transform: rotateY(80deg) translateZ(600px) translateY(-50px);"></div>
+            <div style="background-image: url('./assets/248c2762-5764-4cf2-8343-0be79045773a.jpg'); transform: rotateY(120deg) translateZ(600px) translateY(-50px);"></div>
+            <div style="background-image: url('./assets/3632b3fd-a0c5-48b4-ac65-d8209bfb10e4.jpg'); transform: rotateY(160deg) translateZ(600px) translateY(-50px);"></div>
+            <div style="background-image: url('./assets/701b98bd-f6ad-46f5-b521-80dc982d55c6.jpg'); transform: rotateY(200deg) translateZ(600px) translateY(-50px);"></div>
+            <div style="background-image: url('./assets/a41e9516-3576-448f-9172-24d76d8704ff.jpg'); transform: rotateY(240deg) translateZ(600px) translateY(-50px);"></div>
+            <div style="background-image: url('./assets/c1f8fa90-1075-48a0-b3a3-595cc4cc4889.jpg'); transform: rotateY(280deg) translateZ(600px) translateY(-50px);"></div>
+            <div style="background-image: url('./assets/d6664ecd-ab55-4e5e-a3fc-3dd3af564d98.jpg'); transform: rotateY(320deg) translateZ(600px) translateY(-50px);"></div>
+        </div>
+    </div>
+    
+    <div class="controls">
+        <button class="button" onclick="rotateLeft()">&#x25C0; Previous</button>
+        <button class="button" onclick="rotateRight()">Next &#x25B6;</button>
+    </div>
+    
+    <div class="music-player">
+      
+        <audio controls loop>
+            <source src="./assets//Megharu-Tu-Jhariluna-(OdiaFresh.Com).mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    
+    <script>
+        let angle = 0;
+        function rotateLeft() {
+            angle -= 40;
+            document.getElementById('carousel').style.transform = `rotateY(${angle}deg)`;
+        }
+        function rotateRight() {
+            angle += 40;
+            document.getElementById('carousel').style.transform = `rotateY(${angle}deg)`;
+        }
+    </script>
+</body>
+</html>
